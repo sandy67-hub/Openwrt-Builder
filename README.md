@@ -54,7 +54,7 @@ gcc-multilib g++-multilib gettext git libncurses-dev libssl-dev \
 python3-distutils python3-setuptools rsync swig unzip zlib1g-dev file wget
 ```
 
-### Configurasi
+### Install dan configurasi
 - 1 clone repo ini
 ``` bash
 git clone https://github.com/bobbyunknown/Openwrt-Builder.git
@@ -70,6 +70,11 @@ cd Openwrt-Builder
 > ***Jika ingin menambah package sesuaikan di folder package "Untuk package yang tidak ada di repo openwrt" Cukup tambahkan file IPK saja***
 > ***Ubah jika di belakang nama package ada - misal nya luci-app-syscontrol-12_1_2.ipk Ubah menjadi luci-app-syscontrol_12_1_2.ipk (-) menjadi (_) Underscore***
 > ***Jika ingin menambahkan package yang ada di repo openwrt, cukup tambahkan package di file config-package misal nya driver dan lain-lain***
+
+### Tambahan 
+***Jika tidak ada pc/laptop atau tidak terinstall linux, bisa menggunakan github action dengan cara fork repo ini***
+> [https://github.com/bobbyunknown/Openwrt-Builder/fork](https://github.com/bobbyunknown/Openwrt-Builder/fork)
+- ***Setelah di fork, klik action lalu pilih ULO Autobuilder (Sesuaikan dengan device dan versi openwrt)***
 
 
 ## Screenshot
