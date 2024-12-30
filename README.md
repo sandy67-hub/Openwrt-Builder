@@ -12,18 +12,22 @@ Script untuk mempermudah pembuatan firmware OpenWrt menggunakan ULO-Builder dan 
 
 ## Device yang Didukung
 
-| Amlogic | Allwinner | Rockchip |
-| -------- | ------- | ------- |
-| **S905**  | **A64** (`bananapi-m64`, `nanopi-a64`) | **RK3328** (`-`) |
-| **S905W** | **H5** (`Orange Pi Zero Plus 2`, `Orange Pi Zero Plus`, `Orange Pi Prime`, `Orange Pi PC2`) | **RK3399** (`-`) |
-| **S905D** | **H6** (`Orange Pi 1 Plus`, `Orange Pi Lite 2`, `Orange Pi 3 LTS`, `Orange Pi 3`, `Tanix TX6`) | **RK3528** (`-`) |
-| **S905L** | **H313** (`x96q-lpddr3`) | **RK3566** (`Orange Pi 3B`) |
-| **S905X** | **H616** (`Orange Pi Zero 2`, `X96-Mate`) | **RK3568** (`-`) |
-| **S912** | **H618** (`Orange Pi Zero 3`, `Orange Pi Zero 2W`) | **RK3588S** (`Orange Pi 5`) | 
-| **a311d** | - | **RK3588** (`Orange Pi 5 Plus`) |
-| **s922x** | - | - |
-| **S905Y4** | - | - |
-| **S905X4** | - | - |
+ ### Amlogic
+     s905x (HG680P, B860Hv1/v2)
+     s905x2 (HG680FJ, B860Hv5, MNC CYBORG001)
+     s905x3 
+     s905x4 (AKARI AX810, dll)
+
+ ### Allwinner
+     H5 (Orange Pi Zero Plus 2, Orange Pi Zero Plus, Orange Pi Prime, Orange Pi PC2)
+     H6 (Orange Pi 1 Plus, Orange Pi Lite 2, Orange Pi 3 LTS, Orange Pi 3)
+     H616 (Orange Pi Zero 2)
+     H618 (Orange Pi Zero 3, Orange Pi Zero 2W)
+
+ ### Rockchip
+     RK3566 (Orange Pi 3B)
+     RK3588S (Orange Pi 5)
+     RK3588 (Orange Pi 5 Plus)
 
 
 ### Install depedensi Ulo-builder
