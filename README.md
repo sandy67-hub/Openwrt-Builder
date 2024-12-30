@@ -63,9 +63,9 @@ cd Openwrt-Builder
 - 3 Setelah configurasi selesai pilih 2 untuk build openwrt image
 
 #### Note
-> Jika ingin menambah package sesuaikan di folder package "Untuk package yang tidak ada di repo openwrt" Cukup tambahkan file IPK saja
-> Ubah jika di belakang nama package ada - misal nya luci-app-syscontrol-12_1_2.ipk Ubah menjadi luci-app-syscontrol_12_1_2.ipk (-) menjadi (_) Underscore
-> Jika ingin menambahkan package yang ada di repo openwrt, cukup tambahkan package di file config-package misal nya driver dan lain-lain
+> ***Jika ingin menambah package sesuaikan di folder package "Untuk package yang tidak ada di repo openwrt" Cukup tambahkan file IPK saja***
+> ***Ubah jika di belakang nama package ada - misal nya luci-app-syscontrol-12_1_2.ipk Ubah menjadi luci-app-syscontrol_12_1_2.ipk (-) menjadi (_) Underscore***
+> ***Jika ingin menambahkan package yang ada di repo openwrt, cukup tambahkan package di file config-package misal nya driver dan lain-lain***
 
 
 ## Screenshot
