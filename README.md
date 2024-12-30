@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Openwrt-Builder
 One click build openwrt arm devices only
 =======
@@ -94,4 +93,3 @@ cd Openwrt-Builder
 - Ulo-builder
 - DBAI
 - Indo-WRT
->>>>>>> 0402ff9 (Initial commit: OpenWrt Builder Script)
