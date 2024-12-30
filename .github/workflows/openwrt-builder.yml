@@ -43,21 +43,6 @@ on:
           - "23.05.2"
           - "23.05.1"
           - "23.05.0"
-      rootfs:
-        description: 'ROOTFS File (ex. ImmortalWrt-21-02-7-rootfs.tar.gz)'
-        required: true
-        default: 'ImmortalWrt-21-02-7-rootfs.tar.gz'
-        type: string
-      rootfs_size:
-        description: "ROOTFS Size, min 640 (756, 1024, 2048, etc)"
-        required: true
-        default: '1024'
-        type: string
-      fwinfo:
-        description: 'Firmware Information'
-        required: true
-        default: 'your custom information at release pages'
-        type: string
 
 jobs: 
   build_ipk:
@@ -107,17 +92,15 @@ jobs:
           # Menyimpan konfigurasi ke file
           echo "DEVICE=${{ inputs.devices }}" > config
           echo "KERNEL=$KERNEL" >> config
-          echo "ROOTFS_SIZE=${{ inputs.rootfs_size }}" >> config
+          echo "ROOTFS_SIZE=1024" >> config
           echo "VERSION=${{ inputs.version }}" >> config
-          echo "ROOTFS=${{ inputs.rootfs }}" >> config
           
           # Menampilkan konfigurasi yang dipilih
           echo -e "\nSelected Configuration:"
           echo "Device: ${{ inputs.devices }}"
           echo "Kernel: $KERNEL"
-          echo "Rootfs Size: ${{ inputs.rootfs_size }}M"
+          echo "Rootfs Size: 1024M"
           echo "OpenWrt Version: ${{ inputs.version }}"
-          echo "Rootfs: ${{ inputs.rootfs }}"
           
       - name: Building OpenWrt
         run: |
@@ -153,10 +136,6 @@ jobs:
             ##  OpenWRT Release for ${{ inputs.devices }} devices
             ULO-Builder Release from Github Workflow
             ### OpenWrt Image Information
-            - Firmware Details : 
-              - Devices type : ${{ inputs.devices }}
-              - Kernel version : ${{ env.KERNEL_VERSION }}
-              - ROOTFS File : ${{ inputs.rootfs }}
-              - ROOTFS Size : ${{ inputs.rootfs_size }}
-            - Firmware Information : 
-              - ${{ inputs.fwinfo }}
+            - Devices type : ${{ inputs.devices }}
+            - Kernel version : ${{ env.KERNEL_VERSION }}
+            - ROOTFS Size : 1024M
