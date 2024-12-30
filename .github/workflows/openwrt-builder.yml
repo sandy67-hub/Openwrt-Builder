@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2024 nosignals
-# BobbyUnknown
+# Copyright (C) 2024 BobbyUnknown
 
 name: ULO Autobuilder
 
@@ -107,7 +107,7 @@ jobs:
           chmod +x build
           chmod +x image-builder
           chmod +x ulo-builder
-          echo "2" | ./build
+          echo -e "2\n4" | ./build
           
       - name: Creating Package Artifact
         run: |
@@ -138,4 +138,4 @@ jobs:
             ### OpenWrt Image Information
             - Devices type : ${{ inputs.devices }}
             - Kernel version : ${{ env.KERNEL_VERSION }}
-            - ROOTFS Size : 1024M
+            - ROOTFS Size : 1024M+
