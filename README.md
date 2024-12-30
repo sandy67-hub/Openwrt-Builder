@@ -1,7 +1,4 @@
-# Openwrt-Builder
-One click build openwrt arm devices only
-=======
-# OpenWrt Builder Script
+# OpenWrt Builder
 
 Script untuk mempermudah pembuatan firmware OpenWrt menggunakan ULO-Builder dan OpenWrt Image Builder dalam satu kali klik.
 
