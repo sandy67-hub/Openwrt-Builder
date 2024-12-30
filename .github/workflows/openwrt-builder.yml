@@ -7,11 +7,6 @@ name: ULO Autobuilder
 on:
   workflow_dispatch:
     inputs:
-      kernel:
-        description: 'Kernel Version (ex. 6.6.6, 6.1.31-localversion)'
-        required: true
-        default: '6.6.6'
-        type: string
       devices:
         description: "Devices"
         required: true
@@ -63,6 +58,7 @@ on:
         required: true
         default: 'your custom information at release pages'
         type: string
+
 jobs: 
   build_ipk:
     permissions:
@@ -141,6 +137,10 @@ jobs:
           name: openwrt_package
           path: ./artifact/*
 
+      - name: Set Kernel Version
+        run: |
+          echo "KERNEL_VERSION=$(grep "KERNEL=" config | cut -d'=' -f2)" >> $GITHUB_ENV
+
       - name: Upload release asset
         uses: svenstaro/upload-release-action@v2
         with:
@@ -155,7 +155,7 @@ jobs:
             ### OpenWrt Image Information
             - Firmware Details : 
               - Devices type : ${{ inputs.devices }}
-              - Kernel version : ${{ inputs.kernel }}
+              - Kernel version : ${{ env.KERNEL_VERSION }}
               - ROOTFS File : ${{ inputs.rootfs }}
               - ROOTFS Size : ${{ inputs.rootfs_size }}
             - Firmware Information : 
