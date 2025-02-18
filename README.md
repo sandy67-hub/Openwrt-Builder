@@ -1,5 +1,7 @@
 # OpenWrt Builder
 
+![GitHub forks](https://img.shields.io/github/forks/bobbyunknown/Openwrt-Builder?style=for-the-badge)
+
 Script untuk mempermudah pembuatan firmware OpenWrt menggunakan ULO-Builder dan OpenWrt Image Builder dalam satu kali klik.
 
 ## Fitur
